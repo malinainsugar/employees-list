@@ -1,0 +1,109 @@
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 180px;
+  
+  box-shadow: 0px 4px 8px 0px rgba(57, 113, 164, 0.25);
+}
+
+.dark-theme .header-section{
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+  
+.logo {
+  margin-right: auto;
+}
+  
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+  
+.header-contacts {
+  display: flex;
+  margin-right: 48px;
+  gap: 64px;
+}
+  
+.header-contacts a {
+  font-size: 18px;
+  line-height: 21px;
+  white-space: nowrap; 
+}
+  
+.theme-switch {
+  height: 26px;
+}
+  
+.theme-switch-checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  opacity: 0;
+}
+  
+.theme-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 100%;
+  
+  background: var(--accent-color);
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  
+  cursor: pointer;
+}
+  
+.theme-switch-label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: calc(100% - 23px);
+  width: 20px;
+  height: 20px;
+  
+  background: var(--background-primary-light) url("../../assets/moon.svg") center no-repeat;
+  border-radius: 50%;
+  
+  transition: 0.5s ease all;
+}
+  
+.theme-switch-checkbox:checked + .theme-switch-label::before {
+  left: 3px;
+
+  background: var(--background-primary-light) url("../../assets/sun.svg") center no-repeat;
+}
+
+
+
+@media (max-width: 320px) {
+  
+  .header-section {
+    padding: 10px 24px;
+  }
+
+  .logo {
+    width: 52px;
+  }
+
+  .header-contacts {
+    display: none;
+  }
+
+  .theme-switch {
+    height: 22px;
+  }
+
+  .theme-switch-label {
+    width: 48px;
+  }
+
+  .theme-switch-label::before {
+    left: calc(100% - 20px);
+    width: 17px;
+    height: 17px;
+  }
+}

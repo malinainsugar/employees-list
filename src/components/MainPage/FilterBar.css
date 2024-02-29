@@ -1,0 +1,12 @@
+.filter-bar {
+    max-width: var(--max-width-desktop);
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    .filter-bar {
+        max-width: var(--max-width-mobile);
+        position: relative;
+    }
+}
